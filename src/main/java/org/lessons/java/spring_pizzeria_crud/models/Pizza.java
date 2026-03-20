@@ -26,6 +26,9 @@ public class Pizza {
     @Min(value = 1, message = "Il corsto della pizza deve essere maggiore di 0")
     private BigDecimal price;
 
+    public Pizza() {
+    }
+
     public Pizza(String name, String description, String urlImmagine, BigDecimal price) {
         this.name = name;
         this.description = description;
@@ -34,7 +37,7 @@ public class Pizza {
     }
 
     // GETTERS
-    public int getID() {
+    public Integer getId() {
         return id;
     }
 
@@ -55,6 +58,10 @@ public class Pizza {
     }
 
     // SETTERS
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
     public void setName(String name) {
         this.name = name;
     }
